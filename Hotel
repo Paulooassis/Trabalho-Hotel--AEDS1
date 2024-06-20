@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -122,7 +123,7 @@ void imprimirfuncionariotxt(hotel *h)
     FILE *arq = fopen("funcionarios.txt", "w");
     if (arq == NULL)
     {
-        printf("Erro ao abrir o arquivo de funcionários.\n");
+        printf("Erro ao abrir o arquivo de funcionarios.\n");
         return;
     }
 
@@ -146,7 +147,7 @@ void scanearfuncionariotxt(hotel *h)
 
     if (arq == NULL)
     {
-        printf("Erro ao abrir o arquivo de funcionários.\n");
+        printf("Erro ao abrir o arquivo de funcionarios.\n");
         return;
     }
 
@@ -399,7 +400,7 @@ void cadastrarestadia(hotel *h)
 
         do
         {
-            printf("Digite o código do cliente: ");
+            printf("Digite o codigo do cliente: ");
             scanf("%d", &h->est[h->totest].codigo_cliente);
             for (int i = 0; i < h->totcli; i++)
             {
@@ -412,7 +413,7 @@ void cadastrarestadia(hotel *h)
         }
         while (ver != 1);
 
-        printf("Digite a quantidade de hóspedes: ");
+        printf("Digite a quantidade de hospedes: ");
         scanf("%d", &qnt_hospedes);
 
         do
@@ -426,7 +427,7 @@ void cadastrarestadia(hotel *h)
 
         do
         {
-            printf("Digite a data de saída (dia/mês/ano): ");
+            printf("Digite a data de saida (dia/mês/ano): ");
             scanf("%d/%d/%d", &dat.dia, &dat.mes, &dat.ano);
         }
         while (!validar_data(dat) ||
@@ -463,12 +464,12 @@ void cadastrarestadia(hotel *h)
         }
         else
         {
-            printf("Não há quartos disponíveis para a quantidade de hóspedes.\n");
+            printf("Nao ha quartos disponiveis para a quantidade de hospedes.\n");
         }
     }
     else
     {
-        printf("Não possui clientes ou quartos cadastrados suficientes.\n\n");
+        printf("Nao possui clientes ou quartos cadastrados suficientes.\n\n");
     }
 }
 
@@ -562,7 +563,7 @@ void darbaixaestadia(hotel *h)
         }
     }
     if (!achou)
-        printf("\nNenhuma estadia encontrada com o código fornecido.\n");
+        printf("\nNenhuma estadia encontrada com o codigo fornecido.\n");
 }
 
 // Função para mostrar quais quartos estao livres para estadia
