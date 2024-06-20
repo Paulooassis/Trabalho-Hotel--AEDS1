@@ -22,7 +22,7 @@ typedef struct
     char telefone[20];
 } cliente;
 
-// Estrutura para armazenar funcionários
+// Estrutura para armazenar funcionÃ¡rios
 typedef struct
 {
     int codigo;
@@ -67,7 +67,7 @@ typedef struct
     int totqua;
 } hotel;
 
-// Função para imprimir cliente no arquivo
+// FunÃ§Ã£o para imprimir cliente no arquivo
 void imprimirclientetxt(hotel *h)
 {
     FILE *arq = fopen("clientes.txt", "w");
@@ -90,7 +90,7 @@ void imprimirclientetxt(hotel *h)
     fclose(arq);
 }
 
-// Função para scanear cliente do arquivo
+// FunÃ§Ã£o para scanear cliente do arquivo
 void scanearclientetxt(hotel *h)
 {
     FILE *arq = fopen("clientes.txt", "r");
@@ -117,13 +117,13 @@ void scanearclientetxt(hotel *h)
     fclose(arq);
 }
 
-// Função para imprimir funcionarios no arquivo
+// FunÃ§Ã£o para imprimir funcionarios no arquivo
 void imprimirfuncionariotxt(hotel *h)
 {
     FILE *arq = fopen("funcionarios.txt", "w");
     if (arq == NULL)
     {
-        printf("Erro ao abrir o arquivo de funcionários.\n");
+        printf("Erro ao abrir o arquivo de funcionÃ¡rios.\n");
         return;
     }
 
@@ -140,14 +140,14 @@ void imprimirfuncionariotxt(hotel *h)
     fclose(arq);
 }
 
-// Função para scanear funcionários do arquivo
+// FunÃ§Ã£o para scanear funcionÃ¡rios do arquivo
 void scanearfuncionariotxt(hotel *h)
 {
     FILE *arq = fopen("funcionarios.txt", "r");
 
     if (arq == NULL)
     {
-        printf("Erro ao abrir o arquivo de funcionários.\n");
+        printf("Erro ao abrir o arquivo de funcionÃ¡rios.\n");
         return;
     }
 
@@ -170,7 +170,7 @@ void scanearfuncionariotxt(hotel *h)
     fclose(arq);
 }
 
-// Função para imprimir estadias no arquivo
+// FunÃ§Ã£o para imprimir estadias no arquivo
 void imprimirestadiatxt(hotel *h)
 {
     FILE *arq = fopen("estadias.txt", "w");
@@ -197,7 +197,7 @@ void imprimirestadiatxt(hotel *h)
     fclose(arq);
 }
 
-// Função para scanear estadias do arquivo
+// FunÃ§Ã£o para scanear estadias do arquivo
 void scanearestadiatxt(hotel *h)
 {
     FILE *arq = fopen("estadias.txt", "r");
@@ -236,7 +236,7 @@ void scanearestadiatxt(hotel *h)
     fclose(arq);
 }
 
-// Função para imprimir quartos no arquivo
+// FunÃ§Ã£o para imprimir quartos no arquivo
 void imprimirquartotxt(hotel *h)
 {
     FILE *arq = fopen("quartos.txt", "w");
@@ -266,7 +266,7 @@ void imprimirquartotxt(hotel *h)
     fclose(arq);
 }
 
-// Função para scanear quartos do arquivo
+// FunÃ§Ã£o para scanear quartos do arquivo
 void scanearquartos(hotel *h)
 {
 
@@ -304,7 +304,7 @@ void scanearquartos(hotel *h)
     fclose(arq);
 }
 
-//Função que representa o menu do projeto
+//FunÃ§Ã£o que representa o menu do projeto
 void menu(int *opcao)
 {
     printf("\n\n--------------------------------------------\n");
@@ -324,7 +324,7 @@ void menu(int *opcao)
     scanf("%d", opcao);
 }
 
-//Função para cadastrar um cliente
+//FunÃ§Ã£o para cadastrar um cliente
 void cadastrarcliente(hotel *h)
 {
     printf("\n\tCADASTRAR CLIENTE !!\n\n");
@@ -339,7 +339,7 @@ void cadastrarcliente(hotel *h)
     h->totcli++;
 }
 
-//Função para cadastrar um funcionário
+//FunÃ§Ã£o para cadastrar um funcionÃ¡rio
 void cadastrarfuncionario(hotel *h)
 {
     printf("\n\tCADASTRAR FUNCIONARIO !!\n\n");
@@ -356,7 +356,7 @@ void cadastrarfuncionario(hotel *h)
     h->totfun = h->totfun + 1;
 }
 
-//Função booleana para validar a data
+//FunÃ§Ã£o booleana para validar a data
 bool validar_data(data d)
 {
     if (d.mes < 1 || d.mes > 12 || d.dia < 1 || d.ano < 2023)
@@ -374,7 +374,7 @@ bool validar_data(data d)
     return d.dia <= dias_mes[d.mes - 1];
 }
 
-//Função booleana para verifica a maior data
+//FunÃ§Ã£o booleana para verifica a maior data
 bool data_maior(data d1, data d2)
 {
     if (d2.ano > d1.ano)
@@ -388,7 +388,7 @@ bool data_maior(data d1, data d2)
     return d2.dia >= d1.dia;
 }
 
-//Função para cadastrar um estadia
+//FunÃ§Ã£o para cadastrar um estadia
 void cadastrarestadia(hotel *h)
 {
     int qnt_hospedes, ver = 0;
@@ -400,7 +400,7 @@ void cadastrarestadia(hotel *h)
 
         do
         {
-            printf("Digite o código do cliente: ");
+            printf("Digite o cÃ³digo do cliente: ");
             scanf("%d", &h->est[h->totest].codigo_cliente);
             for (int i = 0; i < h->totcli; i++)
             {
@@ -413,12 +413,12 @@ void cadastrarestadia(hotel *h)
         }
         while (ver != 1);
 
-        printf("Digite a quantidade de hóspedes: ");
+        printf("Digite a quantidade de hÃ³spedes: ");
         scanf("%d", &qnt_hospedes);
 
         do
         {
-            printf("Digite a data de entrada (dia/mês/ano): ");
+            printf("Digite a data de entrada (dia/mÃªs/ano): ");
             scanf("%d/%d/%d", &dat.dia, &dat.mes, &dat.ano);
         }
         while (!validar_data(dat));
@@ -427,7 +427,7 @@ void cadastrarestadia(hotel *h)
 
         do
         {
-            printf("Digite a data de saída (dia/mês/ano): ");
+            printf("Digite a data de saÃ­da (dia/mÃªs/ano): ");
             scanf("%d/%d/%d", &dat.dia, &dat.mes, &dat.ano);
         }
         while (!validar_data(dat) ||
@@ -464,16 +464,16 @@ void cadastrarestadia(hotel *h)
         }
         else
         {
-            printf("Não há quartos disponíveis para a quantidade de hóspedes.\n");
+            printf("NÃ£o hÃ¡ quartos disponÃ­veis para a quantidade de hÃ³spedes.\n");
         }
     }
     else
     {
-        printf("Não possui clientes ou quartos cadastrados suficientes.\n\n");
+        printf("NÃ£o possui clientes ou quartos cadastrados suficientes.\n\n");
     }
 }
 
-//Função para cadastrar um quarto
+//FunÃ§Ã£o para cadastrar um quarto
 void cadastrarquarto(hotel *h)
 {
     h->qua[h->totqua].num_quarto = h->totqua + 1;
@@ -489,7 +489,7 @@ void cadastrarquarto(hotel *h)
     h->totqua++;
 }
 
-//Função para exibir as estadias de um cliente
+//FunÃ§Ã£o para exibir as estadias de um cliente
 void exibeestadia(hotel *h)
 {
     int cod, achou = 0;
@@ -563,10 +563,10 @@ void darbaixaestadia(hotel *h)
         }
     }
     if (!achou)
-        printf("\nNenhuma estadia encontrada com o código fornecido.\n");
+        printf("\nNenhuma estadia encontrada com o cÃ³digo fornecido.\n");
 }
 
-// Função para mostrar quais quartos estao livres para estadia
+// FunÃ§Ã£o para mostrar quais quartos estao livres para estadia
 void exibequartolivre(hotel *h)
 {
     int achou = 0;
@@ -587,7 +587,7 @@ void exibequartolivre(hotel *h)
     }
 }
 
-//Função usada para pesquisar informações de clientes e funcionários
+//FunÃ§Ã£o usada para pesquisar informaÃ§Ãµes de clientes e funcionÃ¡rios
 void pesquisar(hotel *h)
 {
     int op, cod, opcao;
@@ -690,7 +690,7 @@ void pesquisar(hotel *h)
     }
 }
 
-//Main chamando todas as funções de scanear para ler as informações ja inseridas no arquivo
+//Main chamando todas as funÃ§Ãµes de scanear para ler as informaÃ§Ãµes ja inseridas no arquivo
 int main()
 {
     hotel h;
