@@ -23,9 +23,9 @@ O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, 
 
 * **scanearestadiatxt(hotel *h)**: Lê dados das estadias de um arquivo de texto para a memória, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item, sendo scaneado no txt a primeira linha o total de estadias e nas demais, cada linha representa uma estadia e suas informações são separadas por um ";", que são lidas ao inicializar a main, sendo possível utilizar as informações já armazenadas no txt.
 
-* **imprimirquartotxt(hotel *h)**: Imprime os dados dos quartos em um arquivo de texto, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item, sendo printado no txt a primeira linha o total de quartos e nas demais, cada linha representa um quarto e suas informações são separadas por um ";".
+* **imprimirquartotxt(hotel *h)**: Imprime os dados dos quartos em um arquivo de texto, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item, sendo printado no txt a primeira linha o total de quartos e nas demais, cada linha representa um quarto e suas informações são separadas por um ";", a informação do quarto é verificada e caso seja 1 printa como ocupado e caso contrário printa desocupado.
 
-* **scanearquartos(hotel *h)**: Lê dados dos quartos de um arquivo de texto para a memória, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item, sendo scaneado no txt a primeira linha o total de quartos e nas demais, cada linha representa um quarto e suas informações são separadas por um ";", que são lidas ao inicializar a main, sendo possível utilizar as informações já armazenadas no txt.
+* **scanearquartos(hotel *h)**: Lê dados dos quartos de um arquivo de texto para a memória, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item, sendo scaneado no txt a primeira linha o total de quartos e nas demais, cada linha representa um quarto e suas informações são separadas por um ";", que são lidas ao inicializar a main, sendo possível utilizar as informações já armazenadas no txt, no txt é scaneado a informação do quarto, para caso ele esteja como ocupado ele informa como 1 e caso contrário ele informa como 0.
 
 * **menu(int *opcao)**: Exibe um menu de opções para o usuário e lê a escolha dele.
 
@@ -39,7 +39,7 @@ O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, 
 
 * **cadastrarestadia(hotel *h)**: Permite cadastrar uma nova estadia no hotel, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item, além disso possui restrições que verifica se possui quartos livres, se possui quartos para a quantodade de hospedes digitadas, verifica se a data de registro é compatível com o calendário, além de verificar se a data de saida é maior do que a data de entrada.
 
-* **cadastrarquarto(hotel *h)**: Permite cadastrar um novo quarto no hotel, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item e lê as informações que deseja ser cadastrada para o cliente.
+* **cadastrarquarto(hotel *h)**: Permite cadastrar um novo quarto no hotel, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item e lê as informações que deseja ser cadastrada para o cliente, além disso foi imposto uma lógica onde os quartos vazios tem como status 0 e os quartos ocupados tem como status 1 demonstrando que está ocupado.
 
 * **exibeestadia(hotel *h)**: Exibe as informações de uma estadia específica, tem como paramêtro um ponteiro para um struct que contém todas as structs do hotel e o total de cada item, e é solicitado o codigo do cliente que deseja verificar as suas estadias.
 
