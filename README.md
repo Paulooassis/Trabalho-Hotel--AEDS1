@@ -51,20 +51,17 @@ O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, 
 
 ## MENU
 
---------------------------------------------
-BEM VINDO A DUPLA DA SALVACAO !!
---------------------------------------------
-    printf("\n\t\tMENU DE OPCOES !!\n\n");
-    printf("1. Cadastrar um cliente\n");
-    printf("2. Cadastrar um funcionario\n");
-    printf("3. Cadastrar uma estadia\n");
-    printf("4. Cadastrar um quarto\n");
-    printf("5. Ver estadias do cliente\n");
-    printf("6. Dar baixa na estadia\n");
-    printf("7. Ver quartos livres\n");
-    printf("8. Pesquisar informacoes\n");
-    printf("9. Sair do programa\n\n");
-    printf("Digite a opcao desejada: ");
+            MENU DE OPCOES !!
+    1. Cadastrar um cliente
+    2. Cadastrar um funcionario
+    3. Cadastrar uma estadia
+    4. Cadastrar um quarto
+    5. Ver estadias do cliente
+    6. Dar baixa na estadia
+    7. Ver quartos livres
+    8. Pesquisar informacoes
+    9. Sair do programa
+    Digite a opcao desejada: 
 
 
 
