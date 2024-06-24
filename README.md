@@ -63,6 +63,10 @@ O Hotel Descanso Garantido é um hotel localizado no centro de Itacaré – BA, 
     9. Sair do programa
     Digite a opcao desejada: 
 
+* Sendo possivel escolher cada uma das seguintes opções que redirecionará para a tela da opção desejada.
 
+## ARQUIVOS TXT
+
+* Todos os arquivos do txt possui a seguinte lógica, a primeira linha contém o total de itens cadastrados naquele arquivo, por exemplo, clientes, aparece um 2 no topo do arquivo, que significa que possuem 2 clientes separados, e cada linha representa um desses itens, sendo separados por um ";" cada informação, deixando o código bem compreensível e legível.
 
 
